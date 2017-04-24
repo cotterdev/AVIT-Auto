@@ -5,6 +5,7 @@
 #include <StaticConstants.au3>
 #include <WindowsConstants.au3>
 #include <ColorConstants.au3>
+#include <ImageSearch2015.au3>
 
 ;Ver 02:  Added for loop for mouse clicks -- 17/03/21 -- TC
 ;Ver 03:  Added minutes to the timer label.  Made form wider. -- 17/03/21 -- TC
@@ -55,18 +56,22 @@ EndFunc
 Func BeginAutomation()
 	GUICtrlSetBkColor($btnBegin, 0x4EFC49)			;Sets button to green color
 
+
+
+
 	;Read mouse click coord
-	Local $mouseClickArray = FileReadToArray('c:\AVIT_20x20_Support_Files\AutoIT\MouseCoord.txt')
-	If @error Then
-		MsgBox($MB_SYSTEMMODAL, "", "There was an error reading the file. @error: " & @error) ; An error occurred reading the current script file.
-	Else
+	;Local $mouseClickArray = FileReadToArray('c:\AVIT_20x20_Support_Files\AutoIT\MouseCoord.txt')
+	;If @error Then
+	;	MsgBox($MB_SYSTEMMODAL, "", "There was an error reading the file. @error: " & @error) ; An error occurred reading the current script file.
+	;Else
 		;Mouseclicks!!
-		For $i = 0 To UBound($mouseClickArray) - 1 Step 2
-			MouseClick('primary', $mouseClickArray[$i], $mouseClickArray[$i+1], 1)
-			Sleep(700)
-		Next
-	EndIf
+	;	For $i = 0 To UBound($mouseClickArray) - 1 Step 2
+	;		MouseClick('primary', $mouseClickArray[$i], $mouseClickArray[$i+1], 1)
+	;		Sleep(700)
+	;	Next
+	;EndIf
 EndFunc		;End BeginAutomation
+
 
 
 
