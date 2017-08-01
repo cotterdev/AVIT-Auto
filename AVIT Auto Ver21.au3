@@ -6,6 +6,8 @@
 ;Ver 13:  Works!  Test All had a checkmark in it, also sometimes we do a
 ;Ver 18:  Now retries taking SS.  If the image is clicked it may be blue, then again it may not be, now we click on both -- 17/07/28 -- TC
 ;Ver 19:  Made array that holds testing photos bigger -- 17/08/01 -- TC
+;Ver 20:  Array didn't loop enough.  Line 95
+;Ver 21:  $xArray increased in size
 
 
 
@@ -41,8 +43,8 @@ Global $imageArray[20]
 Global $ssImageArray[21]
 Global $retryImage
 Global $retrySSImage
-Global $xArray[5]
-Global $yArray[5]
+Global $xArray[20]
+Global $yArray[20]
 Global $startPic
 Global $xStartPos = 0						;Start has it's own variable because we click this last on it's own
 Global $yStartPos = 0
